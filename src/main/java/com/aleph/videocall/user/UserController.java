@@ -20,15 +20,15 @@ public class UserController {
        return service.findAll();
     }
     @PostMapping("/logout")
-    public void logout(String email){
+    public void logout(@RequestBody String email){
         service.logout(email);
     }
     @PostMapping("/login")
-    public User login(User user){
+    public User login(@RequestBody User user){
         return service.login(user);
     }
     @PostMapping("/register")
-    public void register(User user){
+    public void register(@RequestBody User user){
         service.register(user);
     }
 
